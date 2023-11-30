@@ -1,0 +1,9 @@
+python -m venv venv
+call venv\Scripts\activate
+pip install django
+pip freeze
+django-admin startproject pythonbook . # точка в конце
+python manage.py createsuperuser
+pip install djangorestframework
+pip freeze > requirements.txt
+# далее смотрите в коде
