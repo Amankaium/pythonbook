@@ -1,4 +1,5 @@
 from rest_framework.views import APIView
+from rest_framework.generics import RetrieveAPIView, RetrieveUpdateDestroyAPIView, ListCreateAPIView
 from rest_framework.response import Response
 from task.models import Task
 from task.serializers import *
@@ -26,3 +27,13 @@ class TasksView(APIView):
         else:
             return Response(serializer.error_messages, 400)
         
+
+
+# class TaskGenericDetailAPIView(RetrieveAPIView):
+class TaskGenericDetailAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
+class TasksGenericView(ListCreateAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskCreateSerializer

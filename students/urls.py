@@ -8,4 +8,3 @@ urlpatterns = [
     path('list/', StudentsView.as_view(), name="list"),
 ]
 
-"localhost:8000/api/students/list/"
