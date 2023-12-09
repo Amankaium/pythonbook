@@ -8,3 +8,4 @@ pip install djangorestframework
 pip freeze > requirements.txt
 python manage.py startapp users
 # далее смотрите в коде
+"hello from nurs"
