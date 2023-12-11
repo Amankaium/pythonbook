@@ -10,3 +10,4 @@ python manage.py startapp users
 # далее смотрите в коде
 "hello from nurs"
 "Asan"
+"Jaka"
