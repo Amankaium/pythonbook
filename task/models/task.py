@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from students.models import Student
 
 
 difficulty_choices = (
@@ -32,3 +33,20 @@ class Task(models.Model):
     
     class Meta:
         ordering = ["difficulty"]
+
+#decision
+class Answer(models.Model):
+    task =  models.ForeignKey(Task,on_delete=models.CASCADE)
+    student = models.ForeignKey(
+        Student,models.CASCADE,
+        blank=True, null=True,
+        related_name='answer_list'
+        )
+    txt = models.TextField()
+    correctly = models.BooleanField(default=False)
+
+    created_by = models.DateTimeField(auto_now_add=True)
+    update_by = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_by"]
