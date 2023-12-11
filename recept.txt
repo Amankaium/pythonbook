@@ -37,3 +37,8 @@ git commit -m "another modified repect"
 git push
 
 # создаём MR (PR)
+
+"hello from nurs"
+"Asan"
+"Jaka"
+"Elnura test"
