@@ -11,3 +11,4 @@ python manage.py startapp users
 "hello from nurs"
 "Asan"
 "Jaka"
+"Elnura test"
