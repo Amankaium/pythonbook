@@ -8,6 +8,36 @@ pip install djangorestframework
 pip freeze > requirements.txt
 python manage.py startapp users
 # далее смотрите в коде
+
+# git в команде
+# склонировать код
+
+# стягиваем актуальный код
+git pull
+
+# создаём и переходим на ветку
+# kaium-git-recept - название ветки
+# вместо него пишите название ветки, которую хотите создать
+git checkout -b kaium-git-recept 
+
+# проверяем ветку
+git branch
+
+# вносим изменения в проект
+# тестируете, что всё работает
+
+# заливаем код
+git add .
+git commit -m "modified repect"
+git push --set-upstream origin kaium-git-recept
+
+# последующие коммиты
+git add .
+git commit -m "another modified repect"
+git push
+
+# создаём MR (PR)
+
 "hello from nurs"
 "Asan"
 "Jaka"
